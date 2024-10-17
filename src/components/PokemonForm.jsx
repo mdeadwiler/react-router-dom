@@ -1,7 +1,7 @@
 // src/components/PokemonForm.jsx
 
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const initialState = {
   name: '',
   weight: 0,
@@ -9,12 +9,15 @@ const initialState = {
 };
 
 const PokemonForm = (props) => {
+    const navigate = useNavigate();
   const [formData, setFormData] = useState(initialState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addPokemon(formData);
     setFormData(initialState);
+    navigate('/pokemon');
+
   };
 
   const handleChange = ({ target }) => {

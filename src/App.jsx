@@ -1,7 +1,6 @@
 // src/App.jsx
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-// src/App.jsx
 import PokemonForm from "./components/PokemonForm";
 
 import PokemonList from "./components/PokemonList";
